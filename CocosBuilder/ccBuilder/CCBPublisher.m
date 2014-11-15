@@ -898,15 +898,24 @@
     {
         NSFileManager *fm = [NSFileManager defaultManager];
         NSString* publishDir;
-        
-        publishDir = [projectSettings.publishDirectory absolutePathFromBaseDirPath:[projectSettings.projectPath stringByDeletingLastPathComponent]];
-        [fm removeItemAtPath:publishDir error:NULL];
-        
-        publishDir = [projectSettings.publishDirectoryAndroid absolutePathFromBaseDirPath:[projectSettings.projectPath stringByDeletingLastPathComponent]];
-        [fm removeItemAtPath:publishDir error:NULL];
-        
-        publishDir = [projectSettings.publishDirectoryHTML5 absolutePathFromBaseDirPath:[projectSettings.projectPath stringByDeletingLastPathComponent]];
-        [fm removeItemAtPath:publishDir error:NULL];
+
+        if (projectSettings.publishEnablediPhone && [projectSettings.publishDirectory isEqual: @""] == NO) {
+            //prevent from delete project file
+            publishDir = [projectSettings.publishDirectory absolutePathFromBaseDirPath:[projectSettings.projectPath stringByDeletingLastPathComponent]];
+            [fm removeItemAtPath:publishDir error:NULL];
+        }
+
+        if (projectSettings.publishEnabledAndroid && [projectSettings.publishDirectoryAndroid isEqual:@""] == NO) {
+            //prevent from delete project file
+            publishDir = [projectSettings.publishDirectoryAndroid absolutePathFromBaseDirPath:[projectSettings.projectPath stringByDeletingLastPathComponent]];
+            [fm removeItemAtPath:publishDir error:NULL];
+        }
+
+        if (projectSettings.publishEnabledHTML5 && [projectSettings.publishDirectoryHTML5 isEqual:@""] == NO) {
+            //prevent from delete project file
+            publishDir = [projectSettings.publishDirectoryHTML5 absolutePathFromBaseDirPath:[projectSettings.projectPath stringByDeletingLastPathComponent]];
+            [fm removeItemAtPath:publishDir error:NULL];
+        }
     }
     
     if (!runAfterPublishing)

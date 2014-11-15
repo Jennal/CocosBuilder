@@ -126,6 +126,7 @@
     setting.name = @"iPhone Landscape";
     setting.width = 480;
     setting.height = 320;
+    setting.scale = setting.scale * 0.5f;
     
     return setting;
 }
@@ -137,7 +138,30 @@
     setting.name = @"iPhone Portrait";
     setting.width = 320;
     setting.height = 480;
-    
+    setting.scale = setting.scale * 0.5f;
+
+    return setting;
+}
+
++ (ResolutionSetting*) settingIPhone4Landscape
+{
+    ResolutionSetting* setting = [self settingIPhone];
+
+    setting.name = @"iPhone4 Landscape";
+    setting.width = 960;
+    setting.height = 640;
+
+    return setting;
+}
+
++ (ResolutionSetting*) settingIPhone4Portrait
+{
+    ResolutionSetting* setting = [self settingIPhone];
+
+    setting.name = @"iPhone4 Portrait";
+    setting.width = 640;
+    setting.height = 960;
+
     return setting;
 }
 
@@ -146,8 +170,8 @@
     ResolutionSetting* setting = [self settingIPhone];
     
     setting.name = @"iPhone 5 Landscape";
-    setting.width = 568;
-    setting.height = 320;
+    setting.width = 1136;
+    setting.height = 640;
     
     return setting;
 }
@@ -157,9 +181,9 @@
     ResolutionSetting* setting = [self settingIPhone];
     
     setting.name = @"iPhone 5 Portrait";
-    setting.width = 320;
-    setting.height = 568;
-    
+    setting.width = 640;
+    setting.height = 1136;
+
     return setting;
 }
 
@@ -171,7 +195,7 @@
     setting.width = 0;
     setting.height = 0;
     setting.ext = @"ipad iphonehd";
-    setting.scale = 2;
+    setting.scale = 1.1f;
     
     return setting;
 }
@@ -198,6 +222,30 @@
     return setting;
 }
 
++ (ResolutionSetting*) settingIPad3Landscape
+{
+    ResolutionSetting* setting = [self settingIPad];
+
+    setting.name = @"iPad3 Landscape";
+    setting.width = 2048;
+    setting.height = 1536;
+    setting.scale = setting.scale * 2;
+
+    return setting;
+}
+
++ (ResolutionSetting*) settingIPad3Portrait
+{
+    ResolutionSetting* setting = [self settingIPad];
+
+    setting.name = @"iPad3 Portrait";
+    setting.width = 1536;
+    setting.height = 2048;
+    setting.scale = setting.scale * 2;
+
+    return setting;
+}
+
 + (ResolutionSetting*) settingAndroidXSmall
 {
     ResolutionSetting* setting = [[[ResolutionSetting alloc] init] autorelease];
@@ -206,7 +254,7 @@
     setting.width = 0;
     setting.height = 0;
     setting.ext = @"xsmall";
-    setting.scale = 0.5f;
+    setting.scale = 0.35f;
     
     return setting;
 }
@@ -218,7 +266,7 @@
     setting.name = @"Android X-Small Landscape";
     setting.width = 320;
     setting.height = 240;
-    
+
     return setting;
 }
 
@@ -241,7 +289,7 @@
     setting.width = 0;
     setting.height = 0;
     setting.ext = @"small";
-    setting.scale = 1;
+    setting.scale = 0.5f;
     
     return setting;
 }
@@ -276,7 +324,7 @@
     setting.width = 0;
     setting.height = 0;
     setting.ext = @"medium";
-    setting.scale = 1.5f;
+    setting.scale = 0.8f;
     
     return setting;
 }
@@ -311,7 +359,7 @@
     setting.width = 0;
     setting.height = 0;
     setting.ext = @"large";
-    setting.scale = 2;
+    setting.scale = 1.3f;
     
     return setting;
 }
@@ -346,7 +394,7 @@
     setting.width = 0;
     setting.height = 0;
     setting.ext = @"xlarge";
-    setting.scale = 4;
+    setting.scale = 2.2f;
     
     return setting;
 }
@@ -381,7 +429,7 @@
     setting.width = 0;
     setting.height = 0;
     setting.ext = @"html5";
-    setting.scale = 2;
+    setting.scale = 1.1f;
     
     return setting;
 }

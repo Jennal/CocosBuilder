@@ -49,11 +49,15 @@
 + (ResolutionSetting*) settingIPhone;
 + (ResolutionSetting*) settingIPhoneLandscape;
 + (ResolutionSetting*) settingIPhonePortrait;
++ (ResolutionSetting*) settingIPhone4Landscape;
++ (ResolutionSetting*) settingIPhone4Portrait;
 + (ResolutionSetting*) settingIPhone5Landscape;
 + (ResolutionSetting*) settingIPhone5Portrait;
 + (ResolutionSetting*) settingIPad;
 + (ResolutionSetting*) settingIPadLandscape;
 + (ResolutionSetting*) settingIPadPortrait;
++ (ResolutionSetting*) settingIPad3Landscape;
++ (ResolutionSetting*) settingIPad3Portrait;
 
 // Android resolutions
 + (ResolutionSetting*) settingAndroidXSmall;
