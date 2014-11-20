@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2D09A5FB18895B87006D3932 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D09A5FA18895B87006D3932 /* Images.xcassets */; };
+		2D80DCFD1A1DDA8F005AAFFE /* CCBPublishLuaBindingScript.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D80DCFC1A1DDA8F005AAFFE /* CCBPublishLuaBindingScript.m */; };
+		2D80DD011A1DE5B4005AAFFE /* luaTemplate in Resources */ = {isa = PBXBuildFile; fileRef = 2D80DD001A1DE5B4005AAFFE /* luaTemplate */; };
 		581130601639C52500A86D70 /* seq-startmarker.png in Resources */ = {isa = PBXBuildFile; fileRef = 5811305F1639C52000A86D70 /* seq-startmarker.png */; };
 		581BCFE8162DADE7007DE600 /* CCBSplitHorizontalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 581BCFE7162DADE7007DE600 /* CCBSplitHorizontalView.m */; };
 		58FA2034162D73F3006B8856 /* TB_bottomPanel.png in Resources */ = {isa = PBXBuildFile; fileRef = 58FA2031162D73F3006B8856 /* TB_bottomPanel.png */; };
@@ -862,6 +864,9 @@
 
 /* Begin PBXFileReference section */
 		2D09A5FA18895B87006D3932 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = CocosBuilder/Images.xcassets; sourceTree = SOURCE_ROOT; };
+		2D80DCFB1A1DDA8F005AAFFE /* CCBPublishLuaBindingScript.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBPublishLuaBindingScript.h; sourceTree = "<group>"; };
+		2D80DCFC1A1DDA8F005AAFFE /* CCBPublishLuaBindingScript.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCBPublishLuaBindingScript.m; sourceTree = "<group>"; };
+		2D80DD001A1DE5B4005AAFFE /* luaTemplate */ = {isa = PBXFileReference; lastKnownFileType = folder; path = luaTemplate; sourceTree = "<group>"; };
 		5811305E1639BF1200A86D70 /* SequencerTimelineDrawDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SequencerTimelineDrawDelegate.h; sourceTree = "<group>"; };
 		5811305F1639C52000A86D70 /* seq-startmarker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "seq-startmarker.png"; sourceTree = "<group>"; };
 		581BCFE6162DADE7007DE600 /* CCBSplitHorizontalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBSplitHorizontalView.h; sourceTree = "<group>"; };
@@ -2552,6 +2557,7 @@
 		7789ACEB133AB6A700CEFCC7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2D80DD001A1DE5B4005AAFFE /* luaTemplate */,
 				E373BF1017189D2E00D71602 /* autoCompleteDefinitions */,
 				E390C780170A371E003E9E92 /* version */,
 				E334742E169DC9E0000737CC /* jsdoc */,
@@ -3031,6 +3037,8 @@
 				E3127AA416C1D8E600D09AA4 /* CCBDirectoryComparer.m */,
 				835DAF3F17156161003A2F7B /* CCBHTTPServer.h */,
 				835DAF4017156161003A2F7B /* CCBHTTPServer.m */,
+				2D80DCFB1A1DDA8F005AAFFE /* CCBPublishLuaBindingScript.h */,
+				2D80DCFC1A1DDA8F005AAFFE /* CCBPublishLuaBindingScript.m */,
 			);
 			name = Publishing;
 			sourceTree = "<group>";
@@ -4650,6 +4658,7 @@
 				E35A146715B0A54A00C9AA15 /* PlayerConsoleWindow.xib in Resources */,
 				E3E2704815B18CF500287470 /* TB_play.png in Resources */,
 				E3E2704915B18CF500287470 /* TB_stop.png in Resources */,
+				2D80DD011A1DE5B4005AAFFE /* luaTemplate in Resources */,
 				E3E2704B15B1904400287470 /* toolbar-bottom.png in Resources */,
 				E3F59CCE15B5B7560015523B /* PlayerConsolePairingWindow.xib in Resources */,
 				E326EFB615C84123006D6CE6 /* seq-endmarker.png in Resources */,
@@ -4919,6 +4928,7 @@
 				835DB09B171562D6003A2F7B /* HTTPServer.m in Sources */,
 				835DB09D171562D6003A2F7B /* MultipartFormDataParser.m in Sources */,
 				835DB09F171562D6003A2F7B /* MultipartMessageHeader.m in Sources */,
+				2D80DCFD1A1DDA8F005AAFFE /* CCBPublishLuaBindingScript.m in Sources */,
 				835DB0A1171562D6003A2F7B /* MultipartMessageHeaderField.m in Sources */,
 				835DB0A3171562D6003A2F7B /* HTTPAsyncFileResponse.m in Sources */,
 				835DB0A5171562D6003A2F7B /* HTTPDataResponse.m in Sources */,
