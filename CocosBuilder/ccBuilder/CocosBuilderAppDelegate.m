@@ -1475,8 +1475,7 @@ static BOOL hideAllToNextSeparator;
         [PositionPropertySetter setFloatScale:1.0 type:kCCBScaleTypeMultiplyResolution forNode:layer prop:@"scale"];
         
         [layer setIgnoreAnchorPointForPosition:NO];
-        NodeInfo* nodeInfo = layer.userObject;
-        nodeInfo.displayName = @"Container";
+        layer.displayName = @"Container";
         
         [[CocosScene cocosScene].rootNode addChild:layer];
     }
