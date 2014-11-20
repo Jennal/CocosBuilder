@@ -38,17 +38,31 @@
 - (void) addFullScreenResolutions
 {
     // iOS resolutions
-    ResolutionSetting* iPhoneLandscape = [ResolutionSetting settingIPhone4Landscape];
-    iPhoneLandscape.enabled = YES;
     [resolutionsController addObject:[ResolutionSetting settingIPhoneLandscape]];
     [resolutionsController addObject:[ResolutionSetting settingIPhonePortrait]];
-    [resolutionsController addObject:iPhoneLandscape];
+    ResolutionSetting* settings = [ResolutionSetting settingIPhone4Landscape];
+    settings.enabled = YES;
+    [resolutionsController addObject:settings];
     [resolutionsController addObject:[ResolutionSetting settingIPhone4Portrait]];
-    [resolutionsController addObject:[ResolutionSetting settingIPhone5Landscape]];
+    settings = [ResolutionSetting settingIPhone5Landscape];
+    settings.enabled = YES;
+    [resolutionsController addObject:settings];
     [resolutionsController addObject:[ResolutionSetting settingIPhone5Portrait]];
-    [resolutionsController addObject:[ResolutionSetting settingIPadLandscape]];
+    settings = [ResolutionSetting settingIPhone6Landscape];
+    settings.enabled = YES;
+    [resolutionsController addObject:settings];
+    [resolutionsController addObject:[ResolutionSetting settingIPhone6Portrait]];
+    settings = [ResolutionSetting settingIPhone6PlusLandscape];
+    settings.enabled = YES;
+    [resolutionsController addObject:settings];
+    [resolutionsController addObject:[ResolutionSetting settingIPhone6PlusPortrait]];
+    settings = [ResolutionSetting settingIPadLandscape];
+    settings.enabled = YES;
+    [resolutionsController addObject:settings];
     [resolutionsController addObject:[ResolutionSetting settingIPadPortrait]];
-    [resolutionsController addObject:[ResolutionSetting settingIPad3Landscape]];
+    settings = [ResolutionSetting settingIPad3Landscape];
+    settings.enabled = YES;
+    [resolutionsController addObject:settings];
     [resolutionsController addObject:[ResolutionSetting settingIPad3Portrait]];
 
     // Android resolutions
@@ -71,17 +85,44 @@
 - (void) addCustomSizeScreenResolutions
 {
     // iOS resolutions
-    ResolutionSetting* iPhone = [ResolutionSetting settingIPhone];
-    iPhone.enabled = YES;
-    [resolutionsController addObject:iPhone];
-    [resolutionsController addObject:[ResolutionSetting settingIPad]];
+    [resolutionsController addObject:[ResolutionSetting settingIPhoneLandscape]];
+    [resolutionsController addObject:[ResolutionSetting settingIPhonePortrait]];
+    ResolutionSetting* settings = [ResolutionSetting settingIPhone4Landscape];
+    settings.enabled = YES;
+    [resolutionsController addObject:settings];
+    [resolutionsController addObject:[ResolutionSetting settingIPhone4Portrait]];
+    settings = [ResolutionSetting settingIPhone5Landscape];
+//    settings.enabled = YES;
+    [resolutionsController addObject:settings];
+    [resolutionsController addObject:[ResolutionSetting settingIPhone5Portrait]];
+    settings = [ResolutionSetting settingIPhone6Landscape];
+//    settings.enabled = YES;
+    [resolutionsController addObject:settings];
+    [resolutionsController addObject:[ResolutionSetting settingIPhone6Portrait]];
+    settings = [ResolutionSetting settingIPhone6PlusLandscape];
+//    settings.enabled = YES;
+    [resolutionsController addObject:settings];
+    [resolutionsController addObject:[ResolutionSetting settingIPhone6PlusPortrait]];
+    settings = [ResolutionSetting settingIPadLandscape];
+//    settings.enabled = YES;
+    [resolutionsController addObject:settings];
+    [resolutionsController addObject:[ResolutionSetting settingIPadPortrait]];
+    settings = [ResolutionSetting settingIPad3Landscape];
+//    settings.enabled = YES;
+    [resolutionsController addObject:settings];
+    [resolutionsController addObject:[ResolutionSetting settingIPad3Portrait]];
     
     // Android resolutions
-    [resolutionsController addObject:[ResolutionSetting settingAndroidXSmall]];
-    [resolutionsController addObject:[ResolutionSetting settingAndroidSmall]];
-    [resolutionsController addObject:[ResolutionSetting settingAndroidMedium]];
-    [resolutionsController addObject:[ResolutionSetting settingAndroidLarge]];
-    [resolutionsController addObject:[ResolutionSetting settingAndroidXLarge]];
+    [resolutionsController addObject:[ResolutionSetting settingAndroidXSmallLandscape]];
+    [resolutionsController addObject:[ResolutionSetting settingAndroidXSmallPortrait]];
+    [resolutionsController addObject:[ResolutionSetting settingAndroidSmallLandscape]];
+    [resolutionsController addObject:[ResolutionSetting settingAndroidSmallPortrait]];
+    [resolutionsController addObject:[ResolutionSetting settingAndroidMediumLandscape]];
+    [resolutionsController addObject:[ResolutionSetting settingAndroidMediumPortrait]];
+    [resolutionsController addObject:[ResolutionSetting settingAndroidLargeLandscape]];
+    [resolutionsController addObject:[ResolutionSetting settingAndroidLargePortrait]];
+    [resolutionsController addObject:[ResolutionSetting settingAndroidXLargeLandscape]];
+    [resolutionsController addObject:[ResolutionSetting settingAndroidXLargePortrait]];
     
     // HTML 5
     [resolutionsController addObject:[ResolutionSetting settingHTML5]];

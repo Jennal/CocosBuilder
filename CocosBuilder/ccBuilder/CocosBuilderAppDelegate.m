@@ -1436,7 +1436,7 @@ static BOOL hideAllToNextSeparator;
     [self openJSFile:fileName];
 }
 
-- (void) newFile:(NSString*) fileName type:(NSString*)type resolutions: (NSMutableArray*) resolutions;
+- (void) newFile:(NSString*) fileName type:(NSString*)type resolutions: (NSMutableArray*) resolutions fullScreen:(BOOL) fullScreen
 {
     BOOL origin = NO;
     ResolutionSetting* resolution = [resolutions objectAtIndex:0];
@@ -1467,6 +1467,21 @@ static BOOL hideAllToNextSeparator;
         [PositionPropertySetter setSize:NSMakeSize(100, 100) type:kCCBSizeTypePercent forNode:[CocosScene cocosScene].rootNode prop:@"contentSize"];
     }
     
+    /* Jennal added */
+    if ([type isEqualToString:@"CCLayer"] && fullScreen) {
+        CCLayer* layer = (CCLayer*)[[PlugInManager sharedManager] createDefaultNodeOfType:type];
+        [PositionPropertySetter setSize:NSMakeSize(960, 640) type:kCCBSizeTypeAbsolute forNode:layer prop:@"contentSize"];
+        [PositionPropertySetter setPosition:NSMakePoint(50.0, 50.0) type:kCCBPositionTypePercent forNode:layer prop:@"position"];
+        [PositionPropertySetter setFloatScale:1.0 type:kCCBScaleTypeMultiplyResolution forNode:layer prop:@"scale"];
+        
+        [layer setIgnoreAnchorPointForPosition:NO];
+        NodeInfo* nodeInfo = layer.userObject;
+        nodeInfo.displayName = @"Container";
+        
+        [[CocosScene cocosScene].rootNode addChild:layer];
+    }
+    /* end of Jennal added */
+    
     [outlineHierarchy reloadData];
     [sequenceHandler updateOutlineViewSelection];
     [self updateInspectorFromSelection];
@@ -1474,6 +1489,7 @@ static BOOL hideAllToNextSeparator;
     self.currentDocument = [[[CCBDocument alloc] init] autorelease];
     self.currentDocument.resolutions = resolutions;
     self.currentDocument.currentResolution = 0;
+    
     [self updateResolutionMenu];
     
     [self saveFile:fileName];
@@ -2469,7 +2485,7 @@ static BOOL hideAllToNextSeparator;
                 NSMutableArray *resolutions = wc.availableResolutions;
                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0),
                                dispatch_get_current_queue(), ^{
-                    [self newFile:[[saveDlg URL] path] type:type resolutions:resolutions];
+                    [self newFile:[[saveDlg URL] path] type:type resolutions:resolutions fullScreen:wc.fullScreen];
                 });
             }
             [wc release];
