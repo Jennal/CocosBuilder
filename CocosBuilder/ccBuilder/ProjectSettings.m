@@ -186,6 +186,9 @@
     self.publishResolutionHTML5_height = 320;
     self.publishResolutionHTML5_scale = 1;
     
+    //Jennal Added
+    self.publishLuaScript = YES;
+    
     breakpoints = [[NSMutableDictionary dictionary] retain];
     
     generatedSpriteSheets = [[NSMutableDictionary dictionary] retain];
@@ -257,6 +260,8 @@
     self.deviceOrientationLandscapeRight = [[dict objectForKey:@"deviceOrientationLandscapeRight"] boolValue];
     self.resourceAutoScaleFactor = [[dict objectForKey:@"resourceAutoScaleFactor"]intValue];
     if (resourceAutoScaleFactor == 0) self.resourceAutoScaleFactor = 4;
+    
+    self.publishLuaScript = [[dict objectForKey:@"publishLuaScript"] boolValue]; /* Jennal Added */
     
     // Load generated sprite sheet settings
     NSDictionary* generatedSpriteSheetsDict = [dict objectForKey:@"generatedSpriteSheets"];
@@ -356,6 +361,7 @@
     [dict setObject:[NSNumber numberWithBool:deviceOrientationLandscapeLeft] forKey:@"deviceOrientationLandscapeLeft"];
     [dict setObject:[NSNumber numberWithBool:deviceOrientationLandscapeRight] forKey:@"deviceOrientationLandscapeRight"];
     [dict setObject:[NSNumber numberWithInt:resourceAutoScaleFactor] forKey:@"resourceAutoScaleFactor"];
+    [dict setObject:[NSNumber numberWithInt:self.publishLuaScript] forKey:@"publishLuaScript"]; /* Jennal Added */
     
     if (!javascriptMainCCB) self.javascriptMainCCB = @"";
     if (!javascriptBased) self.javascriptMainCCB = @"";
