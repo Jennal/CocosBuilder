@@ -11,6 +11,6 @@
 @interface CCBPublishLuaBindingScript : NSObject
 
 + (NSString*) exportString:(NSDictionary*) doc ccbiName:(NSString*)name;
-+ (void) fillFuncs:(NSDictionary*) node funcNames:(NSMutableArray*) funcNames;
+//+ (void) fillFuncs:(NSDictionary*) node funcNames:(NSMutableArray*) funcNames;
 
 @end

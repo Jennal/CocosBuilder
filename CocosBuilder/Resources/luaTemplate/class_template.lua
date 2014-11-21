@@ -5,6 +5,9 @@ local funcs = {
     __FUNC_NAMES__
 }
 
+--[[
+    __MEMBERS__
+]]
 local __CLASS_NAME__ = Oop.class("__CLASS_NAME__", function(owner)
     return CCBHelper:create("__CLASS_NAME__", "__CCBI_FILE_PATH__", funcs, owner)
 end)
