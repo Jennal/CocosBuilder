@@ -24,6 +24,9 @@
 
 #import "ResolutionSetting.h"
 
+#define DESIGN_WIDTH 1200
+#define DESIGN_HEIGHT 800
+
 @implementation ResolutionSetting
 
 @synthesize enabled;
@@ -126,7 +129,7 @@
     setting.name = @"iPhone Landscape";
     setting.width = 480;
     setting.height = 320;
-    setting.scale = setting.scale * 0.5f;
+    setting.scale = (float)setting.height / DESIGN_HEIGHT;
     
     return setting;
 }
@@ -138,7 +141,7 @@
     setting.name = @"iPhone Portrait";
     setting.width = 320;
     setting.height = 480;
-    setting.scale = setting.scale * 0.5f;
+    setting.scale = (float)setting.height / DESIGN_WIDTH;
 
     return setting;
 }
@@ -150,6 +153,7 @@
     setting.name = @"iPhone4 Landscape";
     setting.width = 960;
     setting.height = 640;
+    setting.scale = (float)setting.height / DESIGN_HEIGHT;
 
     return setting;
 }
@@ -161,6 +165,7 @@
     setting.name = @"iPhone4 Portrait";
     setting.width = 640;
     setting.height = 960;
+    setting.scale = (float)setting.height / DESIGN_WIDTH;
 
     return setting;
 }
@@ -172,6 +177,7 @@
     setting.name = @"iPhone 5 Landscape";
     setting.width = 1136;
     setting.height = 640;
+    setting.scale = (float)setting.height / DESIGN_HEIGHT;
     
     return setting;
 }
@@ -183,6 +189,7 @@
     setting.name = @"iPhone 5 Portrait";
     setting.width = 640;
     setting.height = 1136;
+    setting.scale = (float)setting.height / DESIGN_WIDTH;
 
     return setting;
 }
@@ -194,7 +201,7 @@
     setting.name = @"iPhone 6 Landscape";
     setting.width = 1334;
     setting.height = 750;
-    setting.scale = setting.scale * setting.height / 640;
+    setting.scale = (float)setting.height / DESIGN_HEIGHT;
     
     return setting;
 }
@@ -206,7 +213,7 @@
     setting.name = @"iPhone 6 Portrait";
     setting.width = 750;
     setting.height = 1334;
-    setting.scale = setting.scale * setting.width / 640;
+    setting.scale = (float)setting.height / DESIGN_WIDTH;
     
     return setting;
 }
@@ -218,7 +225,7 @@
     setting.name = @"iPhone 6 Plus Landscape";
     setting.width = 2208;
     setting.height = 1242;
-    setting.scale = setting.scale * setting.height / 640;
+    setting.scale = (float)setting.height / DESIGN_HEIGHT;
     
     return setting;
 }
@@ -230,7 +237,7 @@
     setting.name = @"iPhone 6 Plus Portrait";
     setting.width = 1242;
     setting.height = 2208;
-    setting.scale = setting.scale * setting.width / 640;
+    setting.scale = (float)setting.height / DESIGN_WIDTH;
     
     return setting;
 }
@@ -243,7 +250,7 @@
     setting.width = 0;
     setting.height = 0;
     setting.ext = @"ipad iphonehd";
-    setting.scale = 1.1f;
+    setting.scale = 768.0f / DESIGN_HEIGHT;
     
     return setting;
 }
@@ -302,7 +309,7 @@
     setting.width = 0;
     setting.height = 0;
     setting.ext = @"xsmall";
-    setting.scale = 0.35f;
+    setting.scale = 240.0f / DESIGN_HEIGHT;
     
     return setting;
 }
@@ -337,7 +344,7 @@
     setting.width = 0;
     setting.height = 0;
     setting.ext = @"small";
-    setting.scale = 0.5f;
+    setting.scale = 340.0f / DESIGN_HEIGHT;
     
     return setting;
 }
@@ -372,7 +379,7 @@
     setting.width = 0;
     setting.height = 0;
     setting.ext = @"medium";
-    setting.scale = 0.8f;
+    setting.scale = 480.0f / DESIGN_HEIGHT;
     
     return setting;
 }
@@ -407,7 +414,7 @@
     setting.width = 0;
     setting.height = 0;
     setting.ext = @"large";
-    setting.scale = 1.3f;
+    setting.scale = 800.0f / DESIGN_HEIGHT;
     
     return setting;
 }
@@ -442,7 +449,7 @@
     setting.width = 0;
     setting.height = 0;
     setting.ext = @"xlarge";
-    setting.scale = 2.2f;
+    setting.scale = 1536.0f / DESIGN_HEIGHT;
     
     return setting;
 }
@@ -477,7 +484,7 @@
     setting.width = 0;
     setting.height = 0;
     setting.ext = @"html5";
-    setting.scale = 1.1f;
+    setting.scale = 768.0f / DESIGN_HEIGHT;
     
     return setting;
 }

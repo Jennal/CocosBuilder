@@ -1470,7 +1470,7 @@ static BOOL hideAllToNextSeparator;
     /* Jennal added */
     if ([type isEqualToString:@"CCLayer"] && fullScreen) {
         CCLayer* layer = (CCLayer*)[[PlugInManager sharedManager] createDefaultNodeOfType:type];
-        [PositionPropertySetter setSize:NSMakeSize(960, 640) type:kCCBSizeTypeAbsolute forNode:layer prop:@"contentSize"];
+        [PositionPropertySetter setSize:NSMakeSize(1200, 800) type:kCCBSizeTypeAbsolute forNode:layer prop:@"contentSize"];
         [PositionPropertySetter setPosition:NSMakePoint(50.0, 50.0) type:kCCBPositionTypePercent forNode:layer prop:@"position"];
         [PositionPropertySetter setFloatScale:1.0 type:kCCBScaleTypeMultiplyResolution forNode:layer prop:@"scale"];
         

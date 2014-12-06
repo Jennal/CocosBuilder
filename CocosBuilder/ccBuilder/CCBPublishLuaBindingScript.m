@@ -20,7 +20,7 @@ enum {
 + (NSString*) exportString:(NSDictionary*) doc ccbiName:(NSString*)ccbiName
 {
     NSDictionary* nodeGraph = [doc objectForKey:@"nodeGraph"];
-    NSString* className = [nodeGraph objectForKey:@"customClass"];
+    NSString* className = [nodeGraph objectForKey:@"jsController"];
     if ( ! className || ! className.length) {
         return nil;
     }
