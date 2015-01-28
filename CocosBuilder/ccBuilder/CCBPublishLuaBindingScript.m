@@ -24,6 +24,15 @@ enum {
     if ( ! className || ! className.length) {
         return nil;
     }
+    //get last component of className
+    NSRange range = [className rangeOfString:@"." options:NSBackwardsSearch];
+    if (range.location != NSNotFound)
+    {
+        className = [className substringFromIndex:range.location + 1];
+    }
+    if ( ! className || ! className.length) {
+        return nil;
+    }
     
     ccbiName = [NSString stringWithFormat:@"ccb/%@.ccbi", ccbiName];
     

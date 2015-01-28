@@ -1,15 +1,18 @@
-local CCBHelper = import("Utils.CCBHelper")
+local CCBLoader = require("CCB.Loader")
 local Oop = import("Oop.init")
 
-local funcs = {
-    __FUNC_NAMES__
-}
-
 --[[
+Callbacks:
+    __FUNC_NAMES__
+
+Members:
     __MEMBERS__
 ]]
 local __CLASS_NAME__ = Oop.class("__CLASS_NAME__", function(owner)
-    return CCBHelper:create("__CLASS_NAME__", "__CCBI_FILE_PATH__", funcs, owner)
+    -- @param "UI.ccb" => code root
+    -- @param "ccb/"   => ccbi folder
+    CCBLoader:setRootPath("UI.ccb", "ccb/")
+    return CCBLoader:load("__CLASS_NAME__", owner)
 end)
 
 function __CLASS_NAME__:ctor()
