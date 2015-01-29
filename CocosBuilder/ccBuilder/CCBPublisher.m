@@ -172,7 +172,9 @@
         if ( ! luaContent) {
             return YES;
         }
-        NSString* luaFile = [NSString stringWithFormat:@"%@/%@.lua", luaDir, file];
+        
+        NSString* folder = [CCBPublishLuaBindingScript getFolders:doc inDir:luaDir];
+        NSString* luaFile = [NSString stringWithFormat:@"%@/%@.lua", folder, file];
         success = [luaContent writeToFile:luaFile atomically:YES encoding:NSUTF8StringEncoding error:NULL];
         if ( ! success) {
             [warnings addWarningWithDescription:[NSString stringWithFormat:@"Failed to publish lua-file. Failed to write file: %@", luaFile] isFatal:NO];

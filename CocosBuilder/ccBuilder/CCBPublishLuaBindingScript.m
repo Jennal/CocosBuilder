@@ -24,6 +24,7 @@ enum {
     if ( ! className || ! className.length) {
         return nil;
     }
+    
     //get last component of className
     NSRange range = [className rangeOfString:@"." options:NSBackwardsSearch];
     if (range.location != NSNotFound)
@@ -146,6 +147,36 @@ enum {
     for (NSDictionary* n in children) {
         [CCBPublishLuaBindingScript fillFuncs:n funcs:funcs members:members];
     }
+}
+
++ (NSString*) getFolders:(NSDictionary*) doc inDir:(NSString*) luaDir
+{
+    NSDictionary* nodeGraph = [doc objectForKey:@"nodeGraph"];
+    NSString* name = [nodeGraph objectForKey:@"jsController"];
+    if ( ! name || ! name.length) {
+        return luaDir;
+    }
+    
+    name = [name stringByReplacingOccurrencesOfString:@"." withString:@"/"];
+    name = [name stringByDeletingLastPathComponent];
+    
+    if ( ! name || name.length <= 0) {
+        return luaDir;
+    }
+    
+    name = [luaDir stringByAppendingPathComponent:name];
+    BOOL isDir;
+    NSFileManager *fileManager= [NSFileManager defaultManager];
+    if( ! [fileManager fileExistsAtPath:name isDirectory:&isDir])
+    {
+        if( ! [fileManager createDirectoryAtPath:name withIntermediateDirectories:YES attributes:nil error:NULL])
+        {
+            NSLog(@"Error: Create folder failed %@", name);
+            return luaDir;
+        }
+    }
+    
+    return name;
 }
 
 @end
