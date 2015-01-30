@@ -30,15 +30,11 @@ local function fillMembers(owner, names, nodes)
     end
 end
 
-local function extend(node, name, isRoot)
+local function extend(node, name)
     local codePath = (CCBLoader.codeRootPath and CCBLoader.codeRootPath ~= "") and CCBLoader.codeRootPath .. "." .. name or name 
     local luaObj = require(codePath)
     for k,v in pairs(luaObj) do
         node[k] = v
-    end
-
-    if not isRoot then
-        node:ctor()
     end
 end
 
@@ -64,7 +60,7 @@ local function fillNode(proxy, ccbReader, owner, isRoot)
 
     --document root
     if "" ~= rootName then
-        extend(node, rootName, isRoot)
+        extend(node, rootName)
         node.animationManager = animationManager
         
         --Callbacks
@@ -122,6 +118,10 @@ local function fillNode(proxy, ccbReader, owner, isRoot)
             local reader = subReaders[i]
             fillNode(proxy, reader, owner, false)
         end
+    end
+
+    if not isRoot and node and type(node.ctor) == "function" then
+        node:ctor()
     end
 end
 
