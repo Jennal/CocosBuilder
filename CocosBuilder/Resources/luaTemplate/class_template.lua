@@ -1,5 +1,5 @@
 local CCBLoader = require("CCB.Loader")
-local Oop = import("Oop.init")
+local Oop = require("Oop.init")
 
 --[[
 Callbacks:
