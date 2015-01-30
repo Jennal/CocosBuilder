@@ -30,15 +30,19 @@ local function fillMembers(owner, names, nodes)
     end
 end
 
-local function extend(node, name)
+local function extend(node, name, isRoot)
     local codePath = (CCBLoader.codeRootPath and CCBLoader.codeRootPath ~= "") and CCBLoader.codeRootPath .. "." .. name or name 
     local luaObj = require(codePath)
     for k,v in pairs(luaObj) do
         node[k] = v
     end
+
+    if not isRoot then
+        node:ctor()
+    end
 end
 
-local function fillNode(proxy, ccbReader, owner)
+local function fillNode(proxy, ccbReader, owner, isRoot)
     local rootName  = ccbReader:getDocumentControllerName()
     local animationManager = ccbReader:getActionManager()
     local node = animationManager:getRootNode()
@@ -60,7 +64,7 @@ local function fillNode(proxy, ccbReader, owner)
 
     --document root
     if "" ~= rootName then
-        extend(node, rootName)
+        extend(node, rootName, isRoot)
         node.animationManager = animationManager
         
         --Callbacks
@@ -116,7 +120,7 @@ local function fillNode(proxy, ccbReader, owner)
     if subReaders then
         for i=1, #subReaders do
             local reader = subReaders[i]
-            fillNode(proxy, reader, owner)
+            fillNode(proxy, reader, owner, false)
         end
     end
 end
@@ -129,7 +133,7 @@ local function doLoad(fileName, proxy, owner)
     local strFilePath = (CCBLoader.ccbiRootPath and CCBLoader.ccbiRootPath ~= "") and CCBLoader.ccbiRootPath .. fileName or fileName
     local ccbReader = proxy:createCCBReader()
     local node      = ccbReader:load(strFilePath)
-    fillNode(proxy, ccbReader, owner)
+    fillNode(proxy, ccbReader, owner, true)
 
     return node
 end
