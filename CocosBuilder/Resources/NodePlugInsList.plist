@@ -30,6 +30,7 @@
 			<array>
 				<string>CCSprite</string>
 				<string>CCScale9Sprite</string>
+				<string>CCRepeat9Sprite</string>
 			</array>
 		</dict>
 		<dict>
