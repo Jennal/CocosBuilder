@@ -90,6 +90,17 @@ enum {
             membersReplacement = [membersReplacement stringByAppendingString:@"\n    "];
         }
         
+        if ([baseClass isEqualToString:@"CCBFile"]) {
+            for (NSDictionary* prop in [node objectForKey:@"properties"]) {
+                if ([[prop objectForKey:@"type"] isEqualToString:@"CCBFile"]) {
+                    NSString* ccbPath = [prop objectForKey:@"value"];
+                    
+                    baseClass = [NSString stringWithFormat:@"CCBFile(%@i)", ccbPath];
+//                    NSLog([NSString stringWithFormat:@"CCBFile: %@i", ccbPath]);
+                }
+            }
+        }
+        
         membersReplacement = [membersReplacement stringByAppendingFormat:@"%@.%@ %@",
                                     [assignType intValue] == kCCBMemberVarAssignmentTypeDocumentRoot ? @"self" : @"owner",
                                     assignName,
@@ -112,7 +123,7 @@ enum {
 + (void) fillFuncs:(NSDictionary*) node funcs:(NSMutableArray*) funcs members:(NSMutableArray*) members
 {
     NSString* className = [node objectForKey:@"baseClass"];
-    NSLog(@"fillFuncs: %@", className);
+//    NSLog(@"fillFuncs: %@", className);
     
     // push to fields
     NSString* assignName = [node objectForKey:@"memberVarAssignmentName"];

@@ -14,9 +14,9 @@
 		2D01F7BD1AB174280088D663 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D01F7B81AB174280088D663 /* Icon.png */; };
 		2D09A5FB18895B87006D3932 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D09A5FA18895B87006D3932 /* Images.xcassets */; };
 		2D6410001AB17A6F0035E671 /* CCRepeat9Sprite.ccbPlugNode in Copy PlugIns */ = {isa = PBXBuildFile; fileRef = 2D01F7AC1AB174080088D663 /* CCRepeat9Sprite.ccbPlugNode */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		2D6410081AB27E7A0035E671 /* CCRepeat9Sprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D6410041AB17D400035E671 /* CCRepeat9Sprite.m */; };
 		2D80DCFD1A1DDA8F005AAFFE /* CCBPublishLuaBindingScript.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D80DCFC1A1DDA8F005AAFFE /* CCBPublishLuaBindingScript.m */; };
 		2D80DD011A1DE5B4005AAFFE /* luaTemplate in Resources */ = {isa = PBXBuildFile; fileRef = 2D80DD001A1DE5B4005AAFFE /* luaTemplate */; };
+		2DD669D91AB6C5C400E5340B /* CCRepeat9Sprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD669D81AB6C5C400E5340B /* CCRepeat9Sprite.m */; };
 		581130601639C52500A86D70 /* seq-startmarker.png in Resources */ = {isa = PBXBuildFile; fileRef = 5811305F1639C52000A86D70 /* seq-startmarker.png */; };
 		581BCFE8162DADE7007DE600 /* CCBSplitHorizontalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 581BCFE7162DADE7007DE600 /* CCBSplitHorizontalView.m */; };
 		58FA2034162D73F3006B8856 /* TB_bottomPanel.png in Resources */ = {isa = PBXBuildFile; fileRef = 58FA2031162D73F3006B8856 /* TB_bottomPanel.png */; };
@@ -887,11 +887,11 @@
 		2D01F7B71AB174280088D663 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2D01F7B81AB174280088D663 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		2D09A5FA18895B87006D3932 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = CocosBuilder/Images.xcassets; sourceTree = SOURCE_ROOT; };
-		2D6410031AB17D400035E671 /* CCRepeat9Sprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCRepeat9Sprite.h; sourceTree = "<group>"; };
-		2D6410041AB17D400035E671 /* CCRepeat9Sprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCRepeat9Sprite.m; sourceTree = "<group>"; };
 		2D80DCFB1A1DDA8F005AAFFE /* CCBPublishLuaBindingScript.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBPublishLuaBindingScript.h; sourceTree = "<group>"; };
 		2D80DCFC1A1DDA8F005AAFFE /* CCBPublishLuaBindingScript.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCBPublishLuaBindingScript.m; sourceTree = "<group>"; };
 		2D80DD001A1DE5B4005AAFFE /* luaTemplate */ = {isa = PBXFileReference; lastKnownFileType = folder; path = luaTemplate; sourceTree = "<group>"; };
+		2DD669D71AB6C5C400E5340B /* CCRepeat9Sprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCRepeat9Sprite.h; sourceTree = "<group>"; };
+		2DD669D81AB6C5C400E5340B /* CCRepeat9Sprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCRepeat9Sprite.m; sourceTree = "<group>"; };
 		5811305E1639BF1200A86D70 /* SequencerTimelineDrawDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SequencerTimelineDrawDelegate.h; sourceTree = "<group>"; };
 		5811305F1639C52000A86D70 /* seq-startmarker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "seq-startmarker.png"; sourceTree = "<group>"; };
 		581BCFE6162DADE7007DE600 /* CCBSplitHorizontalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBSplitHorizontalView.h; sourceTree = "<group>"; };
@@ -2117,6 +2117,8 @@
 			isa = PBXGroup;
 			children = (
 				2DF414A11AB1766000EC1D91 /* Supporting Files */,
+				2DD669D71AB6C5C400E5340B /* CCRepeat9Sprite.h */,
+				2DD669D81AB6C5C400E5340B /* CCRepeat9Sprite.m */,
 				2D01F7B21AB174280088D663 /* CCBRepeat9Sprite.h */,
 				2D01F7B31AB174280088D663 /* CCBRepeat9Sprite.m */,
 			);
@@ -2988,8 +2990,6 @@
 				E3347404169C5402000737CC /* CCColourUtils.m */,
 				E3347405169C5402000737CC /* CCScale9Sprite.h */,
 				E3347406169C5402000737CC /* CCScale9Sprite.m */,
-				2D6410031AB17D400035E671 /* CCRepeat9Sprite.h */,
-				2D6410041AB17D400035E671 /* CCRepeat9Sprite.m */,
 				E3347407169C5402000737CC /* Utils.h */,
 				E3347408169C5402000737CC /* Utils.m */,
 			);
@@ -5080,7 +5080,7 @@
 				E3FEA8B914E492DA00119FBE /* InspectorScaleLock.m in Sources */,
 				E3FEA8BE14E498B700119FBE /* InspectorDegrees.m in Sources */,
 				E3B4221114E49DEB004547D6 /* InspectorInteger.m in Sources */,
-				2D6410081AB27E7A0035E671 /* CCRepeat9Sprite.m in Sources */,
+				2DD669D91AB6C5C400E5340B /* CCRepeat9Sprite.m in Sources */,
 				E3B4221614E4A381004547D6 /* InspectorCheck.m in Sources */,
 				E3B4221B14E4BE87004547D6 /* InspectorSpriteFrame.m in Sources */,
 				E3B4222014E58C75004547D6 /* InspectorByte.m in Sources */,
