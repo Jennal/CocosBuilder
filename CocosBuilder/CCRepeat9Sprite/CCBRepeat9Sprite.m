@@ -24,7 +24,7 @@
 
 - (void) setInsetBottom:(float)insetBottom
 {
-    [super setInsetBottom:insetBottom * [self resolutionScale]];
+    [super setInsetBottom:insetBottom];// * [self resolutionScale]];
     iBot = insetBottom;
 }
 
@@ -35,7 +35,7 @@
 
 - (void) setInsetTop:(float)insetTop
 {
-    [super setInsetTop:insetTop * [self resolutionScale]];
+    [super setInsetTop:insetTop];// * [self resolutionScale]];
     iTop = insetTop;
 }
 
@@ -46,7 +46,7 @@
 
 - (void) setInsetLeft:(float)insetLeft
 {
-    [super setInsetLeft:insetLeft * [self resolutionScale]];
+    [super setInsetLeft:insetLeft];// * [self resolutionScale]];
     iLeft = insetLeft;
 }
 
@@ -57,7 +57,7 @@
 
 - (void) setInsetRight:(float)insetRight
 {
-    [super setInsetRight:insetRight * [self resolutionScale]];
+    [super setInsetRight:insetRight];// * [self resolutionScale]];
     iRight = insetRight;
 }
 
