@@ -10,6 +10,7 @@
 
 @interface CCBPublishLuaBindingScript : NSObject
 
++ (NSString*) getClassName:(NSDictionary*) doc;
 + (NSString*) exportString:(NSDictionary*) doc ccbiName:(NSString*)name;
 + (NSString*) getFolders:(NSDictionary*) doc inDir:(NSString*) luaDir;
 //+ (void) fillFuncs:(NSDictionary*) node funcNames:(NSMutableArray*) funcNames;

@@ -17,7 +17,7 @@ enum {
 
 @implementation CCBPublishLuaBindingScript
 
-+ (NSString*) exportString:(NSDictionary*) doc ccbiName:(NSString*)ccbiName
++ (NSString*) getClassName:(NSDictionary*) doc
 {
     NSDictionary* nodeGraph = [doc objectForKey:@"nodeGraph"];
     NSString* className = [nodeGraph objectForKey:@"jsController"];
@@ -29,6 +29,27 @@ enum {
     NSRange range = [className rangeOfString:@"." options:NSBackwardsSearch];
     if (range.location != NSNotFound)
     {
+        className = [className substringFromIndex:range.location + 1];
+    }
+    
+    return className;
+}
+
++ (NSString*) exportString:(NSDictionary*) doc ccbiName:(NSString*)ccbiName
+{
+    NSDictionary* nodeGraph = [doc objectForKey:@"nodeGraph"];
+    NSString* className = [nodeGraph objectForKey:@"jsController"];
+    NSString* ccbiFolder = @"ccb";
+    if ( ! className || ! className.length) {
+        return nil;
+    }
+    
+    //get last component of className
+    NSRange range = [className rangeOfString:@"." options:NSBackwardsSearch];
+    if (range.location != NSNotFound)
+    {
+        ccbiFolder = [NSString stringWithFormat:@"%@/%@", ccbiFolder, [className substringToIndex:range.location]];
+        ccbiFolder = [ccbiFolder stringByReplacingOccurrencesOfString:@"." withString:@"/"];
         className = [className substringFromIndex:range.location + 1];
     }
     if ( ! className || ! className.length) {
@@ -112,6 +133,7 @@ enum {
     NSString* content = classTemplate;
     
     content = [content stringByReplacingOccurrencesOfString:@"__CCBI_FILE_PATH__" withString:ccbiName];
+    content = [content stringByReplacingOccurrencesOfString:@"__CCBI_FOLDER__" withString:ccbiFolder];
     content = [content stringByReplacingOccurrencesOfString:@"__FUNC_NAMES__" withString:funcNameReplacement];
     content = [content stringByReplacingOccurrencesOfString:@"__FUNC_IMPLEMENTS__" withString:funcImplementReplacement];
     content = [content stringByReplacingOccurrencesOfString:@"__MEMBERS__" withString:membersReplacement];

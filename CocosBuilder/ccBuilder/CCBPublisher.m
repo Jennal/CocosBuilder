@@ -167,7 +167,7 @@
     
     //Jennal Added: Publish lua script
     if (projectSettings.publishLuaScript && [[doc objectForKey:@"jsControlled"] boolValue]) {
-        NSString* file = [[dstFile lastPathComponent] stringByDeletingPathExtension];
+        NSString* file = [CCBPublishLuaBindingScript getClassName:doc];//[[dstFile lastPathComponent] stringByDeletingPathExtension];
         NSString* luaContent = [CCBPublishLuaBindingScript exportString:doc ccbiName:file];
         if ( ! luaContent) {
             return YES;
