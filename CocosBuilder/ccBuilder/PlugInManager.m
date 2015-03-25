@@ -216,7 +216,7 @@
             else
             {
                 // Set the property on the object
-                NSLog(@"name=%@, type=%@", name, type);
+//                NSLog(@"name=%@, type=%@", name, type);
                 [CCBReaderInternal setProp:name ofType:type toValue:defaultValue forNode:node parentSize:CGSizeZero];
             }
         }
