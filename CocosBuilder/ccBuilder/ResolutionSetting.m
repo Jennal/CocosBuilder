@@ -109,6 +109,19 @@
     [super dealloc];
 }
 
++ (ResolutionSetting*) settingDesign
+{
+    ResolutionSetting* setting = [[[ResolutionSetting alloc] init] autorelease];
+    
+    setting.name = @"Design";
+    setting.width = DESIGN_WIDTH;
+    setting.height = DESIGN_HEIGHT;
+    setting.ext = @"design";
+    setting.scale = 1;
+    
+    return setting;
+}
+
 + (ResolutionSetting*) settingIPhone
 {
     ResolutionSetting* setting = [[[ResolutionSetting alloc] init] autorelease];

@@ -57,6 +57,7 @@
 			<key>plugIns</key>
 			<array>
 				<string>CCControlButton</string>
+                <string>CCControlButtonBMFont|CCControlButton</string>
 			</array>
 		</dict>
 		<dict>

@@ -13,10 +13,19 @@
 		2D01F7BC1AB174280088D663 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2D01F7B61AB174280088D663 /* InfoPlist.strings */; };
 		2D01F7BD1AB174280088D663 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D01F7B81AB174280088D663 /* Icon.png */; };
 		2D09A5FB18895B87006D3932 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D09A5FA18895B87006D3932 /* Images.xcassets */; };
-		2D6410001AB17A6F0035E671 /* CCRepeat9Sprite.ccbPlugNode in Copy PlugIns */ = {isa = PBXBuildFile; fileRef = 2D01F7AC1AB174080088D663 /* CCRepeat9Sprite.ccbPlugNode */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2D6410001AB17A6F0035E671 /* CCRepeat9Sprite.ccbPlugNode in Copy PlugIns */ = {isa = PBXBuildFile; fileRef = 2D01F7AC1AB174080088D663 /* CCRepeat9Sprite.ccbPlugNode */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2D80DCFD1A1DDA8F005AAFFE /* CCBPublishLuaBindingScript.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D80DCFC1A1DDA8F005AAFFE /* CCBPublishLuaBindingScript.m */; };
 		2D80DD011A1DE5B4005AAFFE /* luaTemplate in Resources */ = {isa = PBXBuildFile; fileRef = 2D80DD001A1DE5B4005AAFFE /* luaTemplate */; };
 		2DD669D91AB6C5C400E5340B /* CCRepeat9Sprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD669D81AB6C5C400E5340B /* CCRepeat9Sprite.m */; };
+		2DFC85221AC161D20058F252 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7789ABC2133AA82000CEFCC7 /* Cocoa.framework */; };
+		2DFC85241AC161D20058F252 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E3B84C3E151A2C02004B743C /* InfoPlist.strings */; };
+		2DFC85251AC161D20058F252 /* CCBPProperties.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3B84C49151A2CBB004B743C /* CCBPProperties.plist */; };
+		2DFC85261AC161D20058F252 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E3B7BCB715E417DE00CF95EF /* Icon.png */; };
+		2DFCABE31AC162AD0058F252 /* CCBPProperties.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2DFCABDD1AC162AD0058F252 /* CCBPProperties.plist */; };
+		2DFCABE41AC162AD0058F252 /* CCControlButtonBMFont-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2DFCABDE1AC162AD0058F252 /* CCControlButtonBMFont-Info.plist */; };
+		2DFCABE51AC162AD0058F252 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2DFCABE01AC162AD0058F252 /* InfoPlist.strings */; };
+		2DFCABE61AC162AD0058F252 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DFCABE21AC162AD0058F252 /* Icon.png */; };
+		2DFCABE91AC164E50058F252 /* CCControlButtonBMFont.ccbPlugNode in Copy PlugIns */ = {isa = PBXBuildFile; fileRef = 2DFC852A1AC161D20058F252 /* CCControlButtonBMFont.ccbPlugNode */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		581130601639C52500A86D70 /* seq-startmarker.png in Resources */ = {isa = PBXBuildFile; fileRef = 5811305F1639C52000A86D70 /* seq-startmarker.png */; };
 		581BCFE8162DADE7007DE600 /* CCBSplitHorizontalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 581BCFE7162DADE7007DE600 /* CCBSplitHorizontalView.m */; };
 		58FA2034162D73F3006B8856 /* TB_bottomPanel.png in Resources */ = {isa = PBXBuildFile; fileRef = 58FA2031162D73F3006B8856 /* TB_bottomPanel.png */; };
@@ -683,6 +692,13 @@
 			remoteGlobalIDString = 2D01F7A01AB174070088D663;
 			remoteInfo = CCRepeat9Sprite;
 		};
+		2DFCABE71AC163220058F252 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7789ABB5133AA82000CEFCC7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2DFC851F1AC161D20058F252;
+			remoteInfo = CCControlButtonBMFont;
+		};
 		E325F66814F6611300D29BCF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7789ABB5133AA82000CEFCC7 /* Project object */;
@@ -809,13 +825,6 @@
 			remoteGlobalIDString = AB69B62B118B745700903D1D;
 			remoteInfo = MGSFragaria;
 		};
-		E3F541CD15AED85800EAAFBD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E3F541BC15AED68500EAAFBD /* Fragaria.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = AB69B62A118B745700903D1D;
-			remoteInfo = MGSFragaria;
-		};
 		E3FCE8721524859A0028E8E7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7789ABB5133AA82000CEFCC7 /* Project object */;
@@ -844,6 +853,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				2DFCABE91AC164E50058F252 /* CCControlButtonBMFont.ccbPlugNode in Copy PlugIns */,
 				2D6410001AB17A6F0035E671 /* CCRepeat9Sprite.ccbPlugNode in Copy PlugIns */,
 				E3FCE874152485A20028E8E7 /* CCScrollView.ccbPlugNode in Copy PlugIns */,
 				E3C65124151BB8DF00D639C0 /* CCControl.ccbPlugNode in Copy PlugIns */,
@@ -892,6 +902,12 @@
 		2D80DD001A1DE5B4005AAFFE /* luaTemplate */ = {isa = PBXFileReference; lastKnownFileType = folder; path = luaTemplate; sourceTree = "<group>"; };
 		2DD669D71AB6C5C400E5340B /* CCRepeat9Sprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCRepeat9Sprite.h; sourceTree = "<group>"; };
 		2DD669D81AB6C5C400E5340B /* CCRepeat9Sprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCRepeat9Sprite.m; sourceTree = "<group>"; };
+		2DFC852A1AC161D20058F252 /* CCControlButtonBMFont.ccbPlugNode */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CCControlButtonBMFont.ccbPlugNode; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DFCABDD1AC162AD0058F252 /* CCBPProperties.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CCBPProperties.plist; sourceTree = "<group>"; };
+		2DFCABDE1AC162AD0058F252 /* CCControlButtonBMFont-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "CCControlButtonBMFont-Info.plist"; sourceTree = "<group>"; };
+		2DFCABDF1AC162AD0058F252 /* CCControlButtonBMFont-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CCControlButtonBMFont-Prefix.pch"; sourceTree = "<group>"; };
+		2DFCABE11AC162AD0058F252 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2DFCABE21AC162AD0058F252 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		5811305E1639BF1200A86D70 /* SequencerTimelineDrawDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SequencerTimelineDrawDelegate.h; sourceTree = "<group>"; };
 		5811305F1639C52000A86D70 /* seq-startmarker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "seq-startmarker.png"; sourceTree = "<group>"; };
 		581BCFE6162DADE7007DE600 /* CCBSplitHorizontalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBSplitHorizontalView.h; sourceTree = "<group>"; };
@@ -1948,6 +1964,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2DFC85211AC161D20058F252 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DFC85221AC161D20058F252 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7789ABBB133AA82000CEFCC7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -2135,6 +2159,18 @@
 				2D01F7B81AB174280088D663 /* Icon.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2DFCABDC1AC162AD0058F252 /* CCControlButtonBMFont */ = {
+			isa = PBXGroup;
+			children = (
+				2DFCABDD1AC162AD0058F252 /* CCBPProperties.plist */,
+				2DFCABDE1AC162AD0058F252 /* CCControlButtonBMFont-Info.plist */,
+				2DFCABDF1AC162AD0058F252 /* CCControlButtonBMFont-Prefix.pch */,
+				2DFCABE01AC162AD0058F252 /* InfoPlist.strings */,
+				2DFCABE21AC162AD0058F252 /* Icon.png */,
+			);
+			path = CCControlButtonBMFont;
 			sourceTree = "<group>";
 		};
 		776041E01498F4A00078095D /* Document Readers & Writers */ = {
@@ -2501,6 +2537,7 @@
 				E3FCE8661524856D0028E8E7 /* CCScrollView.ccbPlugNode */,
 				FA98CFC1154E7D1C006E58C5 /* ccbpublish */,
 				2D01F7AC1AB174080088D663 /* CCRepeat9Sprite.ccbPlugNode */,
+				2DFC852A1AC161D20058F252 /* CCControlButtonBMFont.ccbPlugNode */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -3127,6 +3164,7 @@
 				E35392791518D78D00471721 /* CCScale9Sprite */,
 				E3C65118151BB89500D639C0 /* CCControl */,
 				E3B84C3B151A2C02004B743C /* CCControlButton */,
+				2DFCABDC1AC162AD0058F252 /* CCControlButtonBMFont */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -4169,6 +4207,23 @@
 			productReference = 2D01F7AC1AB174080088D663 /* CCRepeat9Sprite.ccbPlugNode */;
 			productType = "com.apple.product-type.bundle";
 		};
+		2DFC851F1AC161D20058F252 /* CCControlButtonBMFont */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2DFC85271AC161D20058F252 /* Build configuration list for PBXNativeTarget "CCControlButtonBMFont" */;
+			buildPhases = (
+				2DFC85201AC161D20058F252 /* Sources */,
+				2DFC85211AC161D20058F252 /* Frameworks */,
+				2DFC85231AC161D20058F252 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CCControlButtonBMFont;
+			productName = CCControlButton;
+			productReference = 2DFC852A1AC161D20058F252 /* CCControlButtonBMFont.ccbPlugNode */;
+			productType = "com.apple.product-type.bundle";
+		};
 		7789ABBD133AA82000CEFCC7 /* CocosBuilder */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7789ABDC133AA82000CEFCC7 /* Build configuration list for PBXNativeTarget "CocosBuilder" */;
@@ -4184,7 +4239,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				E3F541CE15AED85800EAAFBD /* PBXTargetDependency */,
+				2DFCABE81AC163220058F252 /* PBXTargetDependency */,
 				E398C02F14FB82090078E771 /* PBXTargetDependency */,
 				E3B7AED314E31AEF00DFD402 /* PBXTargetDependency */,
 				E3C365F814E9E4DD007CD5FF /* PBXTargetDependency */,
@@ -4539,6 +4594,7 @@
 				2D01F7A01AB174070088D663 /* CCRepeat9Sprite */,
 				E3C65115151BB89500D639C0 /* CCControl */,
 				E3B84C38151A2C02004B743C /* CCControlButton */,
+				2DFC851F1AC161D20058F252 /* CCControlButtonBMFont */,
 				E3FCE8651524856D0028E8E7 /* CCScrollView */,
 				7789ABBD133AA82000CEFCC7 /* CocosBuilder */,
 				FA98CFC0154E7D1C006E58C5 /* ccbpublish */,
@@ -4578,6 +4634,20 @@
 				2D01F7BC1AB174280088D663 /* InfoPlist.strings in Resources */,
 				2D01F7BD1AB174280088D663 /* Icon.png in Resources */,
 				2D01F7B91AB174280088D663 /* CCBPProperties.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DFC85231AC161D20058F252 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DFC85241AC161D20058F252 /* InfoPlist.strings in Resources */,
+				2DFCABE51AC162AD0058F252 /* InfoPlist.strings in Resources */,
+				2DFC85251AC161D20058F252 /* CCBPProperties.plist in Resources */,
+				2DFCABE41AC162AD0058F252 /* CCControlButtonBMFont-Info.plist in Resources */,
+				2DFC85261AC161D20058F252 /* Icon.png in Resources */,
+				2DFCABE61AC162AD0058F252 /* Icon.png in Resources */,
+				2DFCABE31AC162AD0058F252 /* CCBPProperties.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -5006,6 +5076,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D01F7BA1AB174280088D663 /* CCBRepeat9Sprite.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DFC85201AC161D20058F252 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -5468,6 +5545,11 @@
 			target = 2D01F7A01AB174070088D663 /* CCRepeat9Sprite */;
 			targetProxy = 2DF414A41AB1774B00EC1D91 /* PBXContainerItemProxy */;
 		};
+		2DFCABE81AC163220058F252 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2DFC851F1AC161D20058F252 /* CCControlButtonBMFont */;
+			targetProxy = 2DFCABE71AC163220058F252 /* PBXContainerItemProxy */;
+		};
 		E325F66914F6611300D29BCF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E325F65914F65C8E00D29BCF /* CCMenuItemImage */;
@@ -5543,11 +5625,6 @@
 			target = E3D59120150F5367004180CA /* CCBFile */;
 			targetProxy = E3D5912D150F53CD004180CA /* PBXContainerItemProxy */;
 		};
-		E3F541CE15AED85800EAAFBD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = MGSFragaria;
-			targetProxy = E3F541CD15AED85800EAAFBD /* PBXContainerItemProxy */;
-		};
 		E3FCE8731524859A0028E8E7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E3FCE8651524856D0028E8E7 /* CCScrollView */;
@@ -5560,6 +5637,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				2D01F7B71AB174280088D663 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2DFCABE01AC162AD0058F252 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2DFCABE11AC162AD0058F252 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -5765,6 +5850,80 @@
 					dynamic_lookup,
 				);
 				PRODUCT_NAME = CCRepeat9Sprite;
+				WRAPPER_EXTENSION = ccbPlugNode;
+			};
+			name = Release;
+		};
+		2DFC85281AC161D20058F252 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libs",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CCControlButton/CCControlButton-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				INFOPLIST_FILE = "CCControlButtonBMFont/CCControlButtonBMFont-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libs/cocos2d-iphone/external/Chipmunk/msvc/glut/lib",
+					"$(PROJECT_DIR)/libs/cocos2d-iphone/external/JavaScript/SpiderMonkey/ios/lib",
+					"$(PROJECT_DIR)/libs/cocos2d-iphone/external/JavaScript/SpiderMonkey/osx/lib",
+					"$(PROJECT_DIR)/libs/MMMarkdown",
+					"$(PROJECT_DIR)/libs/Tupac",
+				);
+				OTHER_LDFLAGS = (
+					"-undefined",
+					dynamic_lookup,
+				);
+				PRODUCT_NAME = CCControlButtonBMFont;
+				WRAPPER_EXTENSION = ccbPlugNode;
+			};
+			name = Debug;
+		};
+		2DFC85291AC161D20058F252 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libs",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CCControlButton/CCControlButton-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				INFOPLIST_FILE = "CCControlButtonBMFont/CCControlButtonBMFont-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libs/cocos2d-iphone/external/Chipmunk/msvc/glut/lib",
+					"$(PROJECT_DIR)/libs/cocos2d-iphone/external/JavaScript/SpiderMonkey/ios/lib",
+					"$(PROJECT_DIR)/libs/cocos2d-iphone/external/JavaScript/SpiderMonkey/osx/lib",
+					"$(PROJECT_DIR)/libs/MMMarkdown",
+					"$(PROJECT_DIR)/libs/Tupac",
+				);
+				OTHER_LDFLAGS = (
+					"-undefined",
+					dynamic_lookup,
+				);
+				PRODUCT_NAME = CCControlButtonBMFont;
 				WRAPPER_EXTENSION = ccbPlugNode;
 			};
 			name = Release;
@@ -6739,6 +6898,15 @@
 			buildConfigurations = (
 				2D01F7AA1AB174070088D663 /* Debug */,
 				2D01F7AB1AB174080088D663 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2DFC85271AC161D20058F252 /* Build configuration list for PBXNativeTarget "CCControlButtonBMFont" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DFC85281AC161D20058F252 /* Debug */,
+				2DFC85291AC161D20058F252 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

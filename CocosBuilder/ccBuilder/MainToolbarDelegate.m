@@ -118,10 +118,21 @@
     for (int i = 0; i < plugIns.count; i++)
     {
         [segmControl setWidth:34 forSegment:i];
-        [segmCell setToolTip:[plugIns objectAtIndex:i] forSegment:i];
+        NSString* name = [plugIns objectAtIndex:i];
+        NSString* tipName = name;
+        NSString* pluginName = name;
+//        NSLog(@"Plugin: %@", name);
+        NSArray* chunks = [name componentsSeparatedByString:@"|"];
+        if ([chunks count] == 2)
+        {
+            pluginName = [chunks objectAtIndex:0];
+//            tipName = [chunks objectAtIndex:1];
+        }
+
+        [segmCell setToolTip:tipName forSegment:i];
         
         // Load icon
-        PlugInNode* plugIn = [pim plugInNodeNamed:[plugIns objectAtIndex:i]];
+        PlugInNode* plugIn = [pim plugInNodeNamed:pluginName];
         [segmCell setImage:plugIn.icon forSegment:i];
     }
     

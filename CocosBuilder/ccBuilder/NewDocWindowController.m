@@ -80,6 +80,9 @@
     // HTML 5
     [resolutionsController addObject:[ResolutionSetting settingHTML5Landscape]];
     [resolutionsController addObject:[ResolutionSetting settingHTML5Portrait]];
+    
+    // Design
+    [resolutionsController addObject:[ResolutionSetting settingDesign]];
 }
 
 - (void) addCustomSizeScreenResolutions
@@ -126,6 +129,9 @@
     
     // HTML 5
     [resolutionsController addObject:[ResolutionSetting settingHTML5]];
+    
+    // Design
+    [resolutionsController addObject:[ResolutionSetting settingDesign]];
 }
 
 - (id)initWithWindow:(NSWindow *)window

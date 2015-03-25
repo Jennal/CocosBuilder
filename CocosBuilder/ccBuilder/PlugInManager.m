@@ -171,7 +171,19 @@
 
 - (CCNode*) createDefaultNodeOfType:(NSString*)name
 {
-    PlugInNode* plugin = [self plugInNodeNamed:name];
+    NSString* pluginName = nil;
+//    NSString* className = name;
+    NSArray* chunks = [name componentsSeparatedByString:@"|"];
+    if ([chunks count] == 2)
+    {
+        pluginName = [chunks objectAtIndex:0];
+    }
+    else
+    {
+        pluginName = name;
+    }
+    
+    PlugInNode* plugin = [self plugInNodeNamed:pluginName];
     if (!plugin) return NULL;
     
     Class editorClass = NSClassFromString(plugin.nodeEditorClassName);
@@ -204,6 +216,7 @@
             else
             {
                 // Set the property on the object
+                NSLog(@"name=%@, type=%@", name, type);
                 [CCBReaderInternal setProp:name ofType:type toValue:defaultValue forNode:node parentSize:CGSizeZero];
             }
         }
