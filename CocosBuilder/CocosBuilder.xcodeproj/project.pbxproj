@@ -18,9 +18,6 @@
 		2D80DD011A1DE5B4005AAFFE /* luaTemplate in Resources */ = {isa = PBXBuildFile; fileRef = 2D80DD001A1DE5B4005AAFFE /* luaTemplate */; };
 		2DD669D91AB6C5C400E5340B /* CCRepeat9Sprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD669D81AB6C5C400E5340B /* CCRepeat9Sprite.m */; };
 		2DFC85221AC161D20058F252 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7789ABC2133AA82000CEFCC7 /* Cocoa.framework */; };
-		2DFC85241AC161D20058F252 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E3B84C3E151A2C02004B743C /* InfoPlist.strings */; };
-		2DFC85251AC161D20058F252 /* CCBPProperties.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3B84C49151A2CBB004B743C /* CCBPProperties.plist */; };
-		2DFC85261AC161D20058F252 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E3B7BCB715E417DE00CF95EF /* Icon.png */; };
 		2DFCABE31AC162AD0058F252 /* CCBPProperties.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2DFCABDD1AC162AD0058F252 /* CCBPProperties.plist */; };
 		2DFCABE41AC162AD0058F252 /* CCControlButtonBMFont-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2DFCABDE1AC162AD0058F252 /* CCControlButtonBMFont-Info.plist */; };
 		2DFCABE51AC162AD0058F252 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2DFCABE01AC162AD0058F252 /* InfoPlist.strings */; };
@@ -4641,11 +4638,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DFC85241AC161D20058F252 /* InfoPlist.strings in Resources */,
 				2DFCABE51AC162AD0058F252 /* InfoPlist.strings in Resources */,
-				2DFC85251AC161D20058F252 /* CCBPProperties.plist in Resources */,
 				2DFCABE41AC162AD0058F252 /* CCControlButtonBMFont-Info.plist in Resources */,
-				2DFC85261AC161D20058F252 /* Icon.png in Resources */,
 				2DFCABE61AC162AD0058F252 /* Icon.png in Resources */,
 				2DFCABE31AC162AD0058F252 /* CCBPProperties.plist in Resources */,
 			);
