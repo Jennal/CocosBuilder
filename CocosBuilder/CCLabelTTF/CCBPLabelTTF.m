@@ -33,6 +33,7 @@
 @synthesize shadowColor;
 @synthesize shadowOffset;
 @synthesize shadowBlur;
+@synthesize isSystemFont;
 
 - (void) setAlignment:(int)alignment
 {

@@ -35,5 +35,6 @@
 @property (nonatomic,assign) ccColor3B shadowColor;
 @property (nonatomic,assign) CGSize shadowOffset;
 @property (nonatomic,assign) int shadowBlur;
+@property (nonatomic,assign) BOOL isSystemFont;
 
 @end

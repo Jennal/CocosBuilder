@@ -35,6 +35,18 @@
 			<key>dontSetInEditor</key>
 			<true/>
 		</dict>
+        <dict>
+            <key>defaultSerialization</key>
+            <true/>
+            <key>default</key>
+            <true/>
+            <key>displayName</key>
+            <string>Is System Font</string>
+            <key>type</key>
+            <string>Check</string>
+            <key>name</key>
+            <string>isSystemFont</string>
+        </dict>
 		<dict>
 			<key>affectsProperties</key>
 			<array>
